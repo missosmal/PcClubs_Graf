@@ -12,7 +12,7 @@ namespace PcClubs_Graf.Classes
         public DbSet<Clubs> Clubs { get; set; }
         public ClubsContext() =>
             Database.EnsureCreated();
-        protected override void OnConfiguring(DbContextOprionBuilder oprionsBuilder) =>
+        protected override void OnConfiguring(DbContextOptionsBuilder oprionsBuilder) =>
             oprionsBuilder.UseMySql(Config.ConnectionConfig, Config.Version);
     }
 }
